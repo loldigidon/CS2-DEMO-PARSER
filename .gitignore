@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Local environments
+.venv/
+venv/
+
+# Parser data and generated artifacts
+demos/
+output/
+temp/
+*.dem
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.7z
+*.rar
+*.zip
+*.log
+
+# Local probes / Windows artifacts
+nul
+_probe.py
+_inspect*.py
+
+# Packaging
+build/
+dist/
+*.egg-info/
+
+# Compressed demos
+*.zst
+
+# Coverage
+.coverage
+htmlcov/
+coverage.xml

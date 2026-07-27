@@ -1,0 +1,53 @@
+name: Bug report
+description: Report a parser, dashboard, or packaging problem
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for helping improve the parser. Do not upload private demos unless you are allowed to share them.
+  - type: input
+    id: version
+    attributes:
+      label: Project version
+      placeholder: "0.1.0"
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Mode
+      options:
+        - parse
+        - parse-viz
+        - visualize
+        - pipeline
+        - package/install
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and traceback
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: "OS, Python version, Awpy version"
+    validations:
+      required: true

@@ -1,0 +1,6 @@
+* text=auto eol=lf
+*.dds binary
+*.png binary
+*.parquet binary
+*.dem binary
+*.zst binary

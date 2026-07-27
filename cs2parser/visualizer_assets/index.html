@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CS2 Match Visualizer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">CS2</span>
+        <div>
+          <strong>LOCAL MATCH VISUALIZER</strong>
+        </div>
+      </div>
+      <div class="topbar-meta" id="topbar-meta"></div>
+    </header>
+
+    <section class="score-hero" id="score-hero">
+      <div class="hero-grid"></div>
+      <div class="hero-glow hero-glow-a"></div>
+      <div class="hero-glow hero-glow-b"></div>
+    </section>
+
+    <nav class="tabs" aria-label="Разделы матча">
+      <button class="tab active" data-tab="overview">Итоги</button>
+      <button class="tab" data-tab="duels">Дуэли</button>
+      <button class="tab" data-tab="utility">Снаряжение</button>
+      <button class="tab" data-tab="economy">Экономика</button>
+      <button class="tab" data-tab="insights">Распределение матча</button>
+    </nav>
+
+    <main>
+      <section class="panel-page active" id="page-overview">
+        <div id="validation-banner"></div>
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">ИТОГИ МАТЧА</span>
+            <h2>Статистика игроков</h2>
+          </div>
+          <span class="local-pill">LOCAL RATING</span>
+        </div>
+        <div id="overview-content"></div>
+      </section>
+
+      <section class="panel-page" id="page-duels">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">HEAD TO HEAD</span>
+            <h2>Дуэли игроков</h2>
+          </div>
+          <div class="legend-inline"><span class="dot win"></span> убийства <span class="dot loss"></span> смерти</div>
+        </div>
+        <div id="duels-content"></div>
+      </section>
+
+      <section class="panel-page" id="page-utility">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">UTILITY</span>
+            <h2>Снаряжение и гранаты</h2>
+          </div>
+          <span class="local-pill">DEMO DATA</span>
+        </div>
+        <div id="utility-content"></div>
+      </section>
+
+      <section class="panel-page" id="page-economy">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">TEAM ECONOMY</span>
+            <h2>Экономика и оружие</h2>
+          </div>
+          <span class="local-pill">FREEZE TIME</span>
+        </div>
+        <div id="economy-content"></div>
+      </section>
+
+      <section class="panel-page" id="page-insights">
+        <div class="section-head">
+          <div>
+            <span class="eyebrow">ROUND PLAYBACK</span>
+            <h2>Распределение матча</h2>
+          </div>
+          <span class="local-pill" id="playback-status">RADAR</span>
+        </div>
+        <div id="insights-content"></div>
+      </section>
+    </main>
+
+    <footer>
+      Локальная визуализация рассчитана по данным демки. Rating и производные показатели не являются официальными метриками FACEIT.<br>
+      Силуэты предметов: Valve Corporation, источник <a href="https://github.com/Juknum/counter-strike-icons" target="_blank" rel="noreferrer">counter-strike-icons</a>; при отсутствии сети интерфейс сохраняет текстовые подписи.
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

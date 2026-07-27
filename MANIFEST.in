@@ -1,0 +1,21 @@
+include LICENSE
+include README.md
+include CHANGELOG.md
+include CONTRIBUTING.md
+include SECURITY.md
+include RELEASE_CHECKLIST.md
+include requirements.txt
+include requirements-dev.txt
+include START.bat
+include *.md
+recursive-include .github *.yml *.md
+recursive-include examples *.py
+recursive-include scripts *.py
+recursive-include tests *.py *.csv
+recursive-include cs2parser *.json *.html *.css *.js *.dds *.png *.txt
+
+global-exclude __pycache__ *.py[cod] .DS_Store
+prune output
+prune temp
+prune dist
+prune build

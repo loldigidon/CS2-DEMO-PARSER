@@ -1,0 +1,7 @@
+awpy>=2.0.2,<3
+numpy>=1.26
+polars>=1.0.0
+pandas>=2.0.0
+pyarrow>=14.0.0
+zstandard>=0.22.0
+Pillow>=10.0.0

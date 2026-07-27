@@ -1,0 +1,78 @@
+[build-system]
+requires = ["setuptools>=77", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cs2-demo-parser"
+dynamic = ["version"]
+description = "Local-first Counter-Strike 2 demo parser with Parquet analytics and an offline dashboard"
+readme = "README.md"
+requires-python = ">=3.11,<3.14"
+license = "MIT"
+license-files = ["LICENSE"]
+keywords = ["counter-strike-2", "cs2", "demo-parser", "esports", "analytics", "parquet"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Intended Audience :: Science/Research",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Games/Entertainment",
+  "Topic :: Scientific/Engineering :: Information Analysis",
+]
+dependencies = [
+  "awpy>=2.0.2,<3",
+  "numpy>=1.26",
+  "polars>=1.0.0",
+  "pandas>=2.0.0",
+  "pyarrow>=14.0.0",
+  "zstandard>=0.22.0",
+  "Pillow>=10.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/loldigidon/CS2-DEMO-PARSER"
+Repository = "https://github.com/loldigidon/CS2-DEMO-PARSER.git"
+Issues = "https://github.com/loldigidon/CS2-DEMO-PARSER/issues"
+Changelog = "https://github.com/loldigidon/CS2-DEMO-PARSER/blob/main/CHANGELOG.md"
+
+[project.optional-dependencies]
+dev = [
+  "build>=1.2.0",
+  "pytest>=8.0.0,<10",
+  "twine>=5.0.0",
+]
+
+[project.scripts]
+cs2-demo-parser = "main:main"
+cs2-demo-pipeline = "pipeline:main"
+cs2-demo-launcher = "launcher:main"
+
+[tool.setuptools]
+include-package-data = true
+py-modules = ["config", "main", "pipeline", "launcher"]
+
+[tool.setuptools.packages.find]
+include = ["cs2parser*"]
+
+[tool.setuptools.dynamic]
+version = {attr = "cs2parser._version.__version__"}
+
+[tool.setuptools.package-data]
+cs2parser = [
+  "*.json",
+  "radars/*",
+  "visualizer_assets/*",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.coverage.run]
+branch = true
+source = ["cs2parser"]
