@@ -38,7 +38,6 @@ dependencies = [
 Homepage = "https://github.com/loldigidon/CS2-DEMO-PARSER"
 Repository = "https://github.com/loldigidon/CS2-DEMO-PARSER.git"
 Issues = "https://github.com/loldigidon/CS2-DEMO-PARSER/issues"
-Changelog = "https://github.com/loldigidon/CS2-DEMO-PARSER/blob/main/CHANGELOG.md"
 
 [project.optional-dependencies]
 dev = [

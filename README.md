@@ -191,9 +191,6 @@ python -m twine check dist/*
 CI проверяет Python 3.11, 3.12 и 3.13, запускает тесты, CLI smoke test и сборку
 wheel/sdist.
 
-См. также [CONTRIBUTING.md](CONTRIBUTING.md), [SECURITY.md](SECURITY.md) и
-[CHANGELOG.md](CHANGELOG.md).
-
 ## Лицензия
 
 [MIT](LICENSE). Проект использует [Awpy](https://github.com/pnxenopoulos/awpy).
