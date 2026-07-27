@@ -4,9 +4,7 @@
 
 Локальный парсер демок Counter-Strike 2 с Parquet-экспортом и HTML-отчётом.
 
-[![CI](https://github.com/loldigidon/CS2-DEMO-PARSER/actions/workflows/ci.yml/badge.svg)](https://github.com/loldigidon/CS2-DEMO-PARSER/actions/workflows/ci.yml)
-[![Python 3.11–3.13](https://img.shields.io/badge/Python-3.11%E2%80%933.13-3776AB?logo=python&logoColor=white)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-2ea44f.svg)](LICENSE)
+[![CI](https://github.com/loldigidon/CS2-DEMO-PARSER/actions/workflows/ci.yml/badge.svg)](https://github.com/loldigidon/CS2-DEMO-PARSER/actions/workflows/ci.yml) [![Python 3.11–3.13](https://img.shields.io/badge/Python-3.11%E2%80%933.13-3776AB?logo=python&logoColor=white)](https://www.python.org/) [![License: MIT](https://img.shields.io/badge/License-MIT-2ea44f.svg)](LICENSE)
 
 `.rar` · `.dem` · `.dem.zst` · папки с несколькими матчами
 
