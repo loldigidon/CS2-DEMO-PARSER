@@ -25,7 +25,7 @@ classifiers = [
   "Topic :: Scientific/Engineering :: Information Analysis",
 ]
 dependencies = [
-  "awpy>=2.0.2,<3",
+  "awpy>=2.0.2,<4",
   "numpy>=1.26",
   "polars>=1.0.0",
   "pandas>=2.0.0",
